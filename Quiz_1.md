@@ -90,6 +90,8 @@ How many restaurants have zipcode 21231?
 
 ### Explanation
 
+    >install.packages("XML", lib="/XML")
+    >library(XML)
     > fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
     > doc <- xmlTreeParse(fileUrl, useInternal=TRUE)
     > rootNode <- xmlRoot(doc)
@@ -119,7 +121,7 @@ DT[,mean(pwgtp15),by=SEX]
 ### Explanation
 
     > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
-    > download.file(fileUrl, destfile="./data/microdata3.csv", method="curl")
+    > download.file(fileUrl, destfile="./data/microdata3.csv", mode="wb")
     > DT <- fread("./data/microdata3.csv")
     > file.info("./data/microdata3.csv")$size
     > system.time(DT[,mean(pwgtp15),by=SEX])
