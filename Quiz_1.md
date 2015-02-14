@@ -122,6 +122,8 @@ DT[,mean(pwgtp15),by=SEX]
 
     > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
     > download.file(fileUrl, destfile="./data/microdata3.csv", mode="wb")
+    > install.packages("data.table", repos="http://R-Forge.R-project.org")
+    > library(data.table)
     > DT <- fread("./data/microdata3.csv")
     > file.info("./data/microdata3.csv")$size
     > system.time(DT[,mean(pwgtp15),by=SEX])
