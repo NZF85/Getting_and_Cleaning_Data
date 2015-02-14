@@ -40,7 +40,7 @@ Tidy data has one variable per column.
 ### Explanation
 
     > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
-    > download.file(fileUrl, destfile="./data/microdata.csv", method="curl")
+    > download.file(fileUrl, destfile="./data/microdata.csv")
     > microData <- read.table("./data/microdata.csv", sep=",", header=TRUE)
     > microData$FES
     
@@ -67,7 +67,7 @@ What is the value of:
 ### Explanation
 
     > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx"
-    > download.file(fileUrl, destfile="./data/nga.xlsx", method="curl")
+    > download.file(fileUrl, destfile="./data/nga.xlsx", mode="wb")
     > dateDownloaded <- date()
     > library(xlsx)
     > colIndex <- 7:15
